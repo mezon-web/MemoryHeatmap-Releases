@@ -11,7 +11,7 @@ Windows のアプリ別メモリ使用量を、株価マップ風のヒートマ
 
 - [MemoryHeatmap-v1.0.0-win-x64.zip](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.0.0/MemoryHeatmap-v1.0.0-win-x64.zip)
 - [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.0.0/MemoryHeatmap-v1.0.0-win-x64.zip.sha256.txt)
-- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.0.0/MemoryHeatmap-v1.0.0-%E4%BD%BF%E3%81%84%E6%96%B9.html)
+- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.0.0/MemoryHeatmap-v1.0.0-manual.html)
 - [リリースページ](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/tag/v1.0.0)
 
 **.NET 10 Desktop Runtime（Windows x64）が必要です。実行環境は同梱していません。**
