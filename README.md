@@ -7,12 +7,12 @@ Windows のアプリ別メモリ使用量を、株価マップ風のヒートマ
 
 ## ダウンロード
 
-**v1.1.0 / Windows 11 x64 / 右クリック操作・プレビュー版**
+**v1.1.1 / Windows 11 x64 / 右クリック操作・プレビュー版**
 
-- [MemoryHeatmap-v1.1.0-win-x64.zip](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.0/MemoryHeatmap-v1.1.0-win-x64.zip)
-- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.0/MemoryHeatmap-v1.1.0-win-x64.zip.sha256.txt)
-- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.0/MemoryHeatmap-v1.1.0-manual.html)
-- [リリースページ](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/tag/v1.1.0)
+- [MemoryHeatmap-v1.1.1-win-x64.zip](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.1/MemoryHeatmap-v1.1.1-win-x64.zip)
+- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.1/MemoryHeatmap-v1.1.1-win-x64.zip.sha256.txt)
+- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.1/MemoryHeatmap-v1.1.1-manual.html)
+- [リリースページ](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/tag/v1.1.1)
 
 **.NET 10 Desktop Runtime（Windows x64）が必要です。実行環境は同梱していません。**
 未導入の場合は [Microsoft の .NET 10 配布ページ](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)から「.NET Desktop Runtime」の Windows x64 を導入してください。
@@ -40,7 +40,7 @@ OS・共有メモリなどを含む PC 全体の使用量とは一致しませ�
 
 タスク終了は強制終了で、未保存のデータが失われる可能性があります。メモリ整理後もコミット量は残り、再アクセスで RAM 使用量が戻る場合があります。
 
-詳しくは [使い方（テキスト）](使い方.txt) と [検証記録](validation-v1.1.0.md) を参照してください。
+詳しくは [使い方（テキスト）](使い方.txt) と [検証記録](validation-v1.1.1.md) を参照してください。
 画像付き HTML は ZIP にも含まれ、ファイルを開くだけでオフライン閲覧できます。画像はすべて架空データによる画面例です。
 
 ## ファイルの確認
@@ -48,7 +48,7 @@ OS・共有メモリなどを含む PC 全体の使用量とは一致しませ�
 PowerShell で ZIP の SHA-256 を計算し、配布している `.sha256.txt` の値と照合できます。
 
 ```powershell
-Get-FileHash .\MemoryHeatmap-v1.1.0-win-x64.zip -Algorithm SHA256
+Get-FileHash .\MemoryHeatmap-v1.1.1-win-x64.zip -Algorithm SHA256
 ```
 
 ZIP の内容は `MemoryHeatmap.exe`、`使い方.txt`、`使い方.html` です。
@@ -57,6 +57,8 @@ GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内�
 このリポジトリは配布案内用です。アプリの開発ソースは非公開リポジトリで管理しています。
 
 ## 更新履歴
+
+- [v1.1.1 — 右クリックメニューの区切り線を修正](release-notes/v1.1.1.md)
 
 - [v1.1.0 — 右クリックからの手動整理・タスク終了](release-notes/v1.1.0.md)
 
