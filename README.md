@@ -7,12 +7,12 @@ Windows のアプリ別メモリ使用量を、株価マップ風のヒートマ
 
 ## ダウンロード
 
-**v1.1.2 / Windows 11 x64 / 右クリック操作・プレビュー版**
+**v1.2.0 / Windows 11 x64 / 空き領域表示・プレビュー版**
 
-- [MemoryHeatmap-v1.1.2-win-x64.zip](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.2/MemoryHeatmap-v1.1.2-win-x64.zip)
-- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.2/MemoryHeatmap-v1.1.2-win-x64.zip.sha256.txt)
-- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.1.2/MemoryHeatmap-v1.1.2-manual.html)
-- [リリースページ](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/tag/v1.1.2)
+- [MemoryHeatmap-v1.2.0-win-x64.zip](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.0/MemoryHeatmap-v1.2.0-win-x64.zip)
+- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.0/MemoryHeatmap-v1.2.0-win-x64.zip.sha256.txt)
+- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.0/MemoryHeatmap-v1.2.0-manual.html)
+- [リリースページ](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/tag/v1.2.0)
 
 **.NET 10 Desktop Runtime（Windows x64）が必要です。実行環境は同梱していません。**
 未導入の場合は [Microsoft の .NET 10 配布ページ](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)から「.NET Desktop Runtime」の Windows x64 を導入してください。
@@ -27,6 +27,7 @@ EXE は単独で移動できます。Windows 11 22H2 の 2023 年 9 月更新以
 - アプリ名、PID、パスで検索。選択アプリの PID 別内訳とコミット量を確認。
 - 一時停止／再開、小さい四角のツールチップ、キーボード操作。
 - PC 全体の使用量、利用可能量、使用率を表示。
+- 「空き領域を表示」で、物理メモリ全体を基準にしたマップへ切り替え。空きは左端の上下いっぱいに表示。
 
 日本語 UI、オフライン動作。右クリックから対象を確認して、メモリ整理・タスク終了・ファイルの場所を開く操作ができます。自動整理・自動常駐は行いません。
 
@@ -35,12 +36,19 @@ EXE は単独で移動できます。Windows 11 22H2 の 2023 年 9 月更新以
 赤は増加、緑は減少、暗色は変化が小さい状態または計測中です。1 MiB 未満の変化は暗色で、数値にはその差も表示します。
 起動直後や再開直後は約 10 秒分の履歴を集めます。初回は使用量順で、その後は既存アプリの並びを維持します。
 
-面積の基準は、表示中に取得できたアプリのプライベートワーキングセットです。
+空き領域 OFF の面積は、表示中に取得できたアプリのプライベートワーキングセットを基準にします。
 OS・共有メモリなどを含む PC 全体の使用量とは一致しません。通常権限で情報を取得できないプロセスは「取得不可」となり、ゼロとして扱いません。
+
+「空き領域を表示」を ON にすると、物理メモリ総量を基準に、左端に利用可能 (空き)、右側にアプリとその他の使用分を表示します。
+検索から外れたアプリは「検索対象外」にまとめ、検索中も空きの幅と対象アプリの面積比を保ちます。
+利用可能量には再利用できるスタンバイを含み、その他は OS・共有分・取得不可などの残りです。
+初回は OFF。以後は EXE の隣の `MemoryHeatmap.settings.json` に選択を保存します。保存できないときは「設定未保存」と表示し、現在の切り替えは有効です。
+
+![空き領域を表示した画面例（架空データ）](images/whole.png)
 
 タスク終了は強制終了で、未保存のデータが失われる可能性があります。メモリ整理後もコミット量は残り、再アクセスで RAM 使用量が戻る場合があります。
 
-詳しくは [使い方（テキスト）](使い方.txt) と [検証記録](validation-v1.1.2.md) を参照してください。
+詳しくは [使い方（テキスト）](使い方.txt) と [検証記録](validation-v1.2.0.md) を参照してください。
 画像付き HTML は ZIP にも含まれ、ファイルを開くだけでオフライン閲覧できます。画像はすべて架空データによる画面例です。
 
 ## ファイルの確認
@@ -48,7 +56,7 @@ OS・共有メモリなどを含む PC 全体の使用量とは一致しませ�
 PowerShell で ZIP の SHA-256 を計算し、配布している `.sha256.txt` の値と照合できます。
 
 ```powershell
-Get-FileHash .\MemoryHeatmap-v1.1.2-win-x64.zip -Algorithm SHA256
+Get-FileHash .\MemoryHeatmap-v1.2.0-win-x64.zip -Algorithm SHA256
 ```
 
 ZIP の内容は `MemoryHeatmap.exe`、`使い方.txt`、`使い方.html` です。
@@ -57,6 +65,9 @@ GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内�
 このリポジトリは配布案内用です。アプリの開発ソースは非公開リポジトリで管理しています。
 
 ## 更新履歴
+
+- [v1.2.0 — メモリ全体と空き領域の表示](release-notes/v1.2.0.md)
+
 
 - [v1.1.2 — 確認画面のボタン名を簡潔に](release-notes/v1.1.2.md)
 
