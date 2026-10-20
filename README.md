@@ -7,12 +7,12 @@ Windows のアプリ別メモリ使用量を、株価マップ風のヒートマ
 
 ## ダウンロード
 
-**v1.2.4 / Windows 11 x64 / チェックボックスの配置調整・プレビュー版**
+**v1.2.5 / Windows 11 x64 / 上下の中央揃えと余白調整・プレビュー版**
 
-- [MemoryHeatmap-v1.2.4-win-x64.zip](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.4/MemoryHeatmap-v1.2.4-win-x64.zip)
-- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.4/MemoryHeatmap-v1.2.4-win-x64.zip.sha256.txt)
-- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.4/MemoryHeatmap-v1.2.4-manual.html)
-- [リリースページ](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/tag/v1.2.4)
+- [MemoryHeatmap-v1.2.5-win-x64.zip](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.5/MemoryHeatmap-v1.2.5-win-x64.zip)
+- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.5/MemoryHeatmap-v1.2.5-win-x64.zip.sha256.txt)
+- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.5/MemoryHeatmap-v1.2.5-manual.html)
+- [リリースページ](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/tag/v1.2.5)
 
 **.NET 10 Desktop Runtime（Windows x64）が必要です。実行環境は同梱していません。**
 未導入の場合は [Microsoft の .NET 10 配布ページ](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)から「.NET Desktop Runtime」の Windows x64 を導入してください。
@@ -58,7 +58,7 @@ OS・共有メモリなどを含む PC 全体の使用量とは一致しませ�
 PowerShell で ZIP の SHA-256 を計算し、配布している `.sha256.txt` の値と照合できます。
 
 ```powershell
-Get-FileHash .\MemoryHeatmap-v1.2.4-win-x64.zip -Algorithm SHA256
+Get-FileHash .\MemoryHeatmap-v1.2.5-win-x64.zip -Algorithm SHA256
 ```
 
 ZIP の内容は `MemoryHeatmap.exe`、`使い方.txt`、`使い方.html` です。
@@ -67,6 +67,8 @@ GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内�
 このリポジトリは配布案内用です。アプリの開発ソースは非公開リポジトリで管理しています。
 
 ## 更新履歴
+
+- [v1.2.5 — チェックボックスの中央揃えと余白を調整](release-notes/v1.2.5.md)
 
 - [v1.2.4 — 空き領域のチェックボックスを検索の左へ移動](release-notes/v1.2.4.md)
 
