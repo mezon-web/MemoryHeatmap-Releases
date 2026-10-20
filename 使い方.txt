@@ -1,4 +1,4 @@
-MemoryHeatmap 1.2.2
+MemoryHeatmap 1.2.3
 アプリ別メモリ使用量・増減の監視ツール
 
 ■ 起動
