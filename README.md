@@ -64,21 +64,17 @@ Get-FileHash .\MemoryHeatmap-v1.2.5-win-x64.zip -Algorithm SHA256
 ZIP の内容は `MemoryHeatmap.exe` と `使い方.html` です。
 GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内リポジトリの文書です。アプリを利用する場合は上記の名前付き ZIP をダウンロードしてください。
 
-このリポジトリは配布案内用です。アプリの開発ソースは非公開リポジトリで管理しています。
-
 ## 更新履歴
 
 - [v1.2.5 — チェックボックスの中央揃えと余白を調整](release-notes/v1.2.5.md)
 
 - [v1.2.4 — 空き領域のチェックボックスを検索の左へ移動](release-notes/v1.2.4.md)
 
-- [v1.2.3 — 更新処理の軽量化と内部整理](release-notes/v1.2.3.md)
+- [v1.2.3 — 更新処理の軽量化](release-notes/v1.2.3.md)
 
 - [v1.2.2 — タイトルバーの表記を変更](release-notes/v1.2.2.md)
 
-
 - [v1.2.1 — 空き領域だけを追加し、アプリ表示と配置を調整](release-notes/v1.2.1.md)
-
 
 - [v1.2.0 — メモリ全体と空き領域の表示](release-notes/v1.2.0.md)
 
@@ -88,5 +84,5 @@ GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内�
 
 - [v1.1.0 — 右クリックからの手動整理・タスク終了](release-notes/v1.1.0.md)
 
-- [v1.0.1 — メモリ最適化と内部整理](release-notes/v1.0.1.md)
+- [v1.0.1 — メモリ使用と更新負荷の軽減](release-notes/v1.0.1.md)
 - [v1.0.0 — 初回プレビュー版](release-notes/v1.0.0.md)
